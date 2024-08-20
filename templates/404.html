@@ -1,0 +1,29 @@
+<!-- articles/templates/articles/index.html -->
+
+{% extends "base.html" %}
+
+{% block page_title %}
+
+
+{% endblock page_title %}
+
+
+{% block page_content %}
+<style>
+#error404 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text404 {
+    font-size: xx-large;
+}
+</style>
+<div id="error404">
+    <div><div id="text404">ERROR 404</div><br>
+    <div id="flavortext404">that link doesn't seem to exist. shucks.</div></div>
+    
+</div>
+
+{% endblock page_content %}

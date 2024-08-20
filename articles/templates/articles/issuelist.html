@@ -179,6 +179,7 @@
 {% endblock page_info %}
 
 {% block page_content %}
+{% load static %}
 <body>
     <div class="container">
         <div class="author-container">
@@ -200,7 +201,9 @@
                         <div class="author-item">
                             <div class="issue-square">
                                 <div class="issue-text">
-                                    Issue {{ issue.num }}
+                                    Issue {{ issue.num }}<br>
+                                    <a href="{% static issue.archive_path %}">pdf</a>
+
                                 </div>
                             </div>
                             <div class="author-info">

@@ -39,6 +39,9 @@ class Issue(models.Model):
         return f"Vol {self.vol}, Issue {self.num}, '{self.name}'"
     def fold(self):
         return f"{self.vol}-{self.num}"
+    def archive_path(self):
+        """self's issue pdf, if one exists, shall live at media/static/{{self.archive_path()}}"""
+        return f"vol{self.vol}/issue{self.num}/CMUREADME_VOL{self.vol}_ISSUE{self.num}.pdf"
 
 class Post(models.Model):
     title = models.CharField(max_length=225)
